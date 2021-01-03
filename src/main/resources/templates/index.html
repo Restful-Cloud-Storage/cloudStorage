@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml" xmlns:sec="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+<!--    C:\Users\p\IdeaProjects\RegistrationAndLogin\src\main\resources\templates\registration.html-->
+</head>
+<body>
+
+    <div class="container">
+        <h1>This is home page</h1>
+        Welcome <span sec:authentication="principal.username"> User </span>
+        <span sec:authorize="isAuthenticated()"><a th:href="@{/logout}">Logout</a></span>
+    </div>
+
+</body>
+</html>
